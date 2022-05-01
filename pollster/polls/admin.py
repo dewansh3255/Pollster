@@ -12,7 +12,7 @@ class ChoiceInline(admin.TabularInline):
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [(None, {'fields' : ['question_text']}),
     ('Date Information', {'fields' : ['pub_date'], 'classes': ['collapse']}),]
-    inline = [ChoiceInline]
+    inlines = [ChoiceInline]
 
 # admin.site.register(Question)
 # admin.site.register(Choice)
